@@ -129,9 +129,9 @@ def expect_runs(player_stats, order = [0, 1, 2, 3, 4, 5, 6, 7, 8]) :
 
 if __name__ == '__main__' :
 
-    parser = argparse.ArgumentParser(description = 'Given a lineup, find the expected number of runs.')
-    parser.add_argument("filename", nargs = '?', default = 'landers.data', help = "file with necessary statistics")
-    parser.add_argument("lineup", nargs = '?', default = '012345678', help = "batting lineup")
+    parser = argparse.ArgumentParser(description = 'lineup, expected runs.')
+    parser.add_argument("filename", nargs = '?', default = 'landers.data', help = "necessary stats")
+    parser.add_argument("lineup", nargs = '?', default = '012345678', help = "batting order")
     args = parser.parse_args()
 
     order = inputorder(args.lineup)
